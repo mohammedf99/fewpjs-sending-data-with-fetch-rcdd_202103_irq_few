@@ -12,6 +12,11 @@ const submitData = (userName, userEmail) => {
     body: JSON.stringify({
       name: userName,
       email: userEmail
-    }).then((response) => response.json()).catch((error) => console.log(error.message))
+    }).then((response) => response.json()).then((json) => {
+              const body = document.getElementsByTagName('body')[0];
+        const p = document.createElement('p')
+        p.innerHTML = `${json.id}`
+        body.append(p);
+    }).catch((error) => console.log(error.message))
   });
 }
