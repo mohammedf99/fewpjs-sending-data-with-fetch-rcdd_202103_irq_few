@@ -1,6 +1,7 @@
 // Add your code here
 
-const URL = "http://localhost:3000/dogs";
+const submitData = () => {
+  const URL = "http://localhost:3000/dogs";
 
 fetch(URL, {
   method: "POST",
@@ -10,5 +11,6 @@ fetch(URL, {
   },
   body: JSON.stringify({
     
-  })
+  }).then((response) => response.json()).catch((error) => console.log(error.message))
 });
+}
