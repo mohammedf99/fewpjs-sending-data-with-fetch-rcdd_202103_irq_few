@@ -3,7 +3,7 @@
 const submitData = (userName, userEmail) => {
   const URL = "http://localhost:3000/dogs";
 
-  fetch(URL, {
+  return fetch(URL, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
