@@ -9,7 +9,6 @@ fetch(URL, {
     "Accept": "application/json"
   }
   body: JSON.stringify({
-    name: "Steve",
-    email: "steve@steve.com"
-  });
+    
+  })
 })
