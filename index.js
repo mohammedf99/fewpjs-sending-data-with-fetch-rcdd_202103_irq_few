@@ -13,10 +13,12 @@ const submitData = (userName, userEmail) => {
       name: userName,
       email: userEmail
     }).then((response) => response.json()).then((json) => {
-              const body = document.getElementsByTagName('body')[0];
+        const body = document.getElementsByTagName('body')[0];
         const p = document.createElement('p')
         p.innerHTML = `${json.id}`
         body.append(p);
     }).catch((error) => console.log(error.message))
   });
 }
+
+submitData();
