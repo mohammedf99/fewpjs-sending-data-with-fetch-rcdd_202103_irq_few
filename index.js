@@ -21,4 +21,4 @@ const submitData = (userName, userEmail) => {
   });
 }
 
-submitData();
+submitData("mohammed", "hamid");
