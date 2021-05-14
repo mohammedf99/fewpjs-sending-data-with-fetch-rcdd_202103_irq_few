@@ -1,6 +1,6 @@
 // Add your code here
 
-const submitData = () => {
+const submitData = (userName, userEmail) => {
   const URL = "http://localhost:3000/dogs";
 
   fetch(URL, {
@@ -10,7 +10,8 @@ const submitData = () => {
       "Accept": "application/json"
     },
     body: JSON.stringify({
-      
+      name: userName,
+      email: userEmail
     }).then((response) => response.json()).catch((error) => console.log(error.message))
   });
 }
